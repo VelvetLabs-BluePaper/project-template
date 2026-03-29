@@ -23,6 +23,12 @@ DEBES ser autosuficiente y PROACTIVO. Trabaja sin que te lo pidan. Actualiza el 
 - Confirma recibido, responde por el mismo canal
 - Nunca dejes mensajes sin responder
 
+## Configuracion auto
+- **Auto mode**: habilitado en `.claude/settings.json` (defaultMode: auto)
+- **Hooks**: SessionStart lanza sub-agentes, PreCompact/Stop guardan contexto
+- **Sub-agentes**: definidos en `.claude/agents/` (ui, build, infra, qa)
+- **ADRs**: decisiones de arquitectura en `docs/decisions/`
+
 ## Optimizacion de Tokens
 - Se quirurgico: archivos exactos, lineas, funciones
 - Respuestas concisas: solo codigo, sin explicacion si no se pide
@@ -31,4 +37,7 @@ DEBES ser autosuficiente y PROACTIVO. Trabaja sin que te lo pidan. Actualiza el 
 
 ## Estructura de CLAUDE.md anidados
 - `/channel/CLAUDE.md` — Crons, endpoints, comunicacion entre agentes
-- `/agents/CLAUDE.md` — Sub-agentes, checklist, plantillas
+- `/agents/CLAUDE.md` — Sub-agentes, checklist, effort table, anti-patrones
+- `.claude/agents/` — Definiciones de sub-agentes con frontmatter
+- `.claude/hooks/` — Auto-launch de sub-agentes al iniciar sesion
+- `docs/decisions/` — ADRs (Architecture Decision Records)
