@@ -3,16 +3,6 @@
     "defaultMode": "auto"
   },
   "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash .claude/hooks/launch-subagents.sh"
-          }
-        ]
-      }
-    ],
     "PreCompact": [
       {
         "hooks": [

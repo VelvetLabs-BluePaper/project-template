@@ -25,8 +25,8 @@ DEBES ser autosuficiente y PROACTIVO. Trabaja sin que te lo pidan. Actualiza el 
 
 ## Configuracion auto
 - **Auto mode**: habilitado en `.claude/settings.json` (defaultMode: auto)
-- **Hooks**: SessionStart lanza sub-agentes, PreCompact/Stop guardan contexto
-- **Sub-agentes**: definidos en `.claude/agents/` (ui, build, infra, qa)
+- **Hooks**: PreCompact/Stop guardan contexto
+- **Sub-agentes**: definidos en `.claude/agents/` (ui, build, infra, qa). Se lanzan on-demand por el lider via Agent tool.
 - **ADRs**: decisiones de arquitectura en `docs/decisions/`
 
 ## Optimizacion de Tokens
@@ -39,5 +39,5 @@ DEBES ser autosuficiente y PROACTIVO. Trabaja sin que te lo pidan. Actualiza el 
 - `/channel/CLAUDE.md` — Crons, endpoints, comunicacion entre agentes
 - `/agents/CLAUDE.md` — Sub-agentes, checklist, effort table, anti-patrones
 - `.claude/agents/` — Definiciones de sub-agentes con frontmatter
-- `.claude/hooks/` — Auto-launch de sub-agentes al iniciar sesion
+- `.claude/hooks/` — Hooks de ciclo de vida (PreCompact, Stop)
 - `docs/decisions/` — ADRs (Architecture Decision Records)
